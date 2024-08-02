@@ -1,7 +1,6 @@
-
 :root {
   font-size: 62.5%;
-  
+
   /************ Custom Properties ***********/
 
   /* Main Color */
@@ -19,23 +18,23 @@
   /* tertiary color modified */
   --tertiary-color-m: #01727498;
 
-
-    /* tertiary color modified */
+  /* tertiary color modified */
   --quaternary-color: #fff;
 
+  /* Transition cubic  */
+  --transition-cubic: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-   /* Transition  */
-  --transition: color 0.35s cubic-bezier(0.68,-0.55,0.265,1.55);
+  /* Transform cubic  */
+  --transform-cubic: transform 0.35s cubic-bezier(0.645, -0.45, 0.355, 1);
 
-
-     /* transition  */
+  /* transition  */
   --transition: all 0.4s ease-in-out;
-
-
-
 
   /* Transition Duration */
   --transition-duration: 0.3s;
+
+  /* Transform Duration */
+  --transform-duration: transform 0.45s;
 
   /* Section Title Font Size */
   --font-size-title: calc(2rem + 2vw);
@@ -44,7 +43,15 @@
   --padding-section: 8vh 3vw;
 }
 
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Family *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+$font-family: (
+  "baloo-tamma": "Baloo Tamma 2",
+  "indie-flower": "Indie Flower",
+);
 
+@function font-family($font-family-name) {
+  @return map-get($font-family, $font-family-name);
+}
 
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Weights *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 $font-weights: (
@@ -63,6 +70,7 @@ $font-weights: (
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Sizes *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 $font-sizes: (
   "font-size-small": calc(1.2rem + 0.5vw),
+  "font-size-small-to-regular": calc(1rem + 0.66667vw),
   "font-size-regular": calc(1.5rem + 1vw),
   "font-size-medium": calc(1.5rem + 2vw),
   "font-size-large": calc(1.5rem + 5vw),
@@ -84,4 +92,3 @@ $break-points: (
 @function break-point($break-point-limit) {
   @return map-get($break-points, $break-point-limit);
 }
-

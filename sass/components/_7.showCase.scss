@@ -1,0 +1,75 @@
+@import "./../animation/1.animation";
+
+.showcase {
+  height: 100vh;
+  background: url("/up/img/full-bg-07-1.jpg");
+  // background-repeat: no- ;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__content {
+    background-color: var(--secondary-color-m);
+    padding: calc(1rem + 2vw);
+    height: calc(5rem + 20vmax);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    animation: hero 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    &--title {
+      font-size: var(--font-size-title);
+      color: var(--quaternary-color);
+    }
+    &--para {
+      font-family: font-family(indie-flower);
+      font-size: font-size(font-size-regular);
+      color: var(--quaternary-color);
+    }
+    &--link {
+      &:link,
+      &:visited {
+        padding: 1rem 0;
+        transition: var(--transition);
+        width: 9rem;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        position: relative;
+        z-index: 1;
+      }
+      &:link::after,
+      &:visited::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--primary-color);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: var(--transform-cubic);
+        z-index: -1;
+      }
+      &:hover::after,
+      &:active::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+  }
+
+  @include media-tablet {
+    background-position: 100%;
+    align-items: flex-end;
+  }
+  @include media-medium {
+    background-position: 80%;
+  }
+}

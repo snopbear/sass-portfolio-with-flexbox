@@ -21,7 +21,7 @@
       align-items: center;
       a {
         i {
-          font-size: calc(1rem + 0.66667vw);
+          font-size: font-size(font-size-small-to-regular);
           color: var(--quaternary-color);
           padding-bottom: calc(2rem+0.6667vw);
           transition: var(--transition);

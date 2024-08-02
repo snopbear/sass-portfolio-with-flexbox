@@ -17,7 +17,7 @@
           position: relative;
           padding: 0.2rem 0.6rem;
           padding-right: 3vw;
-          font-size: calc(1rem + 0.66667vw);
+          font-size: font-size(font-size-small-to-regular);
           &:link::before,
           &:visited::before,
           &:link::after,
@@ -86,7 +86,7 @@
           height: 0.3rem;
           background-color: var(--quaternary-color);
           border-radius: 0.2rem;
-          transition: var(--transition);
+          transition: var(--transition-cubic);
         }
       }
       &--link {
@@ -148,3 +148,8 @@
 .fade {
   opacity: 1;
 }
+
+
+
+
+
