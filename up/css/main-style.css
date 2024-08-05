@@ -260,7 +260,7 @@ main {
 
 .showcase {
   height: 100vh;
-  background: url("/up/img/full-bg-07-1.jpg");
+  background: url("../../up/img/full-bg-07-1.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -560,7 +560,7 @@ main {
 
 .contact {
   height: 100vh;
-  background-image: url("/up/img/full-bg-03.jpg");
+  background-image: url("../../up/img/full-bg-03.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
