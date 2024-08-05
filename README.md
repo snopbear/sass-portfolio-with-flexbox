@@ -18,17 +18,18 @@ Welcome to my Portfolio Website! This project is built using HTML5 and Sass, foc
 2. npm install
 
 # Usage:
+
 1. npm run sass
 
-2. 
+ 
 # Project Structure
 
-1.css/: Compiled CSS files.
-2.images/: Image assets.
-3.js/: JavaScript files for interactivity.
-4.scss/: Sass partials and main Sass file.
-5.index.html: Main HTML file.
-6.README.md: Project documentation.
+1. css/: Compiled CSS files.
+2. images/: Image assets.
+3. js/: JavaScript files for interactivity.
+4. scss/: Sass partials and main Sass file.
+5. index.html: Main HTML file.
+6. README.md: Project documentation.
 
 # License
 
