@@ -21,8 +21,10 @@
   --tertiary-color: #017374;
   /* tertiary color modified */
   --tertiary-color-m: #01727498;
-  /* tertiary color modified */
+  /* quaternary color  */
   --quaternary-color: #fff;
+  /* quaternary color modified */
+  --quaternary-color-m: #000;
   /* Transition cubic  */
   --transition-cubic: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   /* Transform cubic  */
@@ -33,10 +35,10 @@
   --transition-duration: 0.3s;
   /* Transform Duration */
   --transform-duration: transform 0.45s;
+  /* Transform Duration ease-in-out */
+  --transform-duration: transform 0.45s ease-in-out;
   /* Section Title Font Size */
-  --font-size-title: calc(2rem + 2vw);
-  /* Section Padding */
-  --padding-section: 8vh 3vw; }
+  --font-size-title: calc(2rem + 2vw); }
 
 body {
   font-family: "Baloo Tamma 2", cursive;
@@ -207,6 +209,55 @@ main {
     transform: translateX(0);
     opacity: 1; } }
 
+/************/
+@keyframes web-design {
+  0% {
+    width: 0; }
+  100% {
+    width: 80%; } }
+
+@keyframes print-design {
+  0% {
+    width: 0; }
+  100% {
+    width: 90%; } }
+
+@keyframes logo-design {
+  0% {
+    width: 0; }
+  100% {
+    width: 85%; } }
+
+@keyframes graphic-design {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@keyframes html {
+  0% {
+    width: 0; }
+  100% {
+    width: 85%; } }
+
+@keyframes javaScript {
+  0% {
+    width: 0; }
+  100% {
+    width: 95%; } }
+
+@keyframes python {
+  0% {
+    width: 0; }
+  100% {
+    width: 75%; } }
+
+@keyframes sql {
+  0% {
+    width: 0; }
+  100% {
+    width: 60%; } }
+
 .showcase {
   height: 100vh;
   background: url("/up/img/full-bg-07-1.jpg");
@@ -283,3 +334,270 @@ main {
       transition: filter 0.45s ease; }
       .work__card img:hover, .work__card img:active {
         filter: sepia(80%); }
+
+.about-me {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: var(--secondary-color); }
+  .about-me__img, .about-me__content {
+    flex-basis: 40rem;
+    flex-grow: 1;
+    padding: 2rem; }
+  .about-me__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .about-me__content--title, .about-me__content--para {
+    margin-bottom: 4rem;
+    letter-spacing: 0.2rem; }
+  .about-me__content--title {
+    font-size: calc(1.5rem + 1vw);
+    padding: 1rem 0;
+    color: var(--quaternary-color);
+    text-transform: uppercase;
+    position: relative; }
+    .about-me__content--title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0.3rem;
+      width: 10%;
+      background-color: var(--primary-color); }
+  .about-me__content--para {
+    font-size: calc(1.2rem + 0.5vw);
+    font-family: "Indie Flower"; }
+  .about-me__content--link:link, .about-me__content--link:visited {
+    padding: 1rem 0;
+    font-size: calc(1.2rem + 0.5vw);
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1; }
+    .about-me__content--link:link::after, .about-me__content--link:link::after, .about-me__content--link:visited::after, .about-me__content--link:visited::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: var(--primary-color);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+      z-index: -1; }
+    .about-me__content--link:link:hover::after, .about-me__content--link:link:active::after, .about-me__content--link:visited:hover::after, .about-me__content--link:visited:active::after {
+      transform: scaleY(1);
+      transform-origin: top; }
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6rem 3rem 2rem;
+  background-color: var(--primary-color); }
+  .services__service {
+    padding: 4rem;
+    margin: 0 2rem 4rem;
+    flex-basis: 40rem;
+    flex-grow: 1;
+    background-color: var(--secondary-color);
+    border-bottom: 0.2rem solid var(--secondary-color);
+    border-left: 0.2rem solid var(--secondary-color);
+    border-right: 0.2rem solid var(--secondary-color);
+    position: relative;
+    z-index: 1; }
+    .services__service::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: var(--primary-color);
+      transform: scaleX(0);
+      transition: var(--transform-cubic);
+      z-index: -1; }
+    .services__service:hover::after, .services__service:active::after {
+      transform: scaleX(1); }
+    .services__service i, .services__service--title {
+      font-size: calc(1.5rem + 1vw);
+      margin-bottom: 2rem; }
+    .services__service i {
+      color: var(--quaternary-color); }
+    .services__service--title {
+      text-transform: uppercase;
+      color: var(--quaternary-color-m); }
+    .services__service--para {
+      font-size: calc(1.2rem + 0.5vw);
+      color: var(--quaternary-color);
+      font-family: "Indie Flower"; }
+  @media screen and (max-width: 600px) {
+    .services {
+      padding: 6rem 3rem 2rem; }
+      .services .service {
+        padding: calc(1rem + 1vw);
+        margin: 0 0 calc(1rem + 2vw); }
+        .services .service--title {
+          font-size: calc(1.5rem + 1vw); }
+        .services .service--para {
+          font-size: calc(1.2rem + 0.5vw); } }
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: calc(1rem + 2vw);
+  background-color: var(--tertiary-color); }
+  .skills__design, .skills__coding {
+    flex-basis: 40rem;
+    flex-grow: 1;
+    padding: calc(1rem + 2vw);
+    text-transform: uppercase; }
+  .skills__design h4,
+  .skills__coding h4 {
+    font-size: calc(1.2rem + 0.5vw);
+    color: var(--quaternary-color); }
+  .skills__design--title, .skills__coding--title {
+    font-size: calc(1rem + 0.66667vw);
+    margin-bottom: 2rem; }
+  .skills__design--progress, .skills__coding--progress {
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 3rem;
+    background-color: var(--primary-color);
+    width: 100%;
+    margin-bottom: 2rem; }
+  .skills__design--progress span,
+  .skills__coding--progress span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2rem;
+    width: 5rem;
+    background-color: var(--secondary-color);
+    border-radius: 1rem; }
+  .skills__design--progress__web-design {
+    animation: web-design 4s infinite cubic-bezier(1, 0, 0, 1); }
+  .skills__design--progress__print-design {
+    animation: print-design 4s infinite cubic-bezier(1, 0, 0, 1); }
+  .skills__design--progress__logo-design {
+    animation: logo-design 4s infinite cubic-bezier(1, 0, 0, 1); }
+  .skills__design--progress__graphic-design {
+    animation: print-design 4s infinite cubic-bezier(1, 0, 0, 1); }
+  .skills__coding--progress__html {
+    animation: html 4s infinite cubic-bezier(1, 0, 0, 1); }
+  .skills__coding--progress__javaScript {
+    animation: print-design 4s infinite cubic-bezier(1, 0, 0, 1); }
+  .skills__coding--progress__python {
+    animation: logo-design 4s infinite cubic-bezier(1, 0, 0, 1); }
+  .skills__coding--progress__sql {
+    animation: print-design 4s infinite cubic-bezier(1, 0, 0, 1); }
+
+.testimonials {
+  padding: calc(1rem +2vw);
+  background-color: var(--secondary-color);
+  color: var(--quaternary-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+  .testimonials__card {
+    padding: 2vw;
+    flex-basis: 62rem;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden; }
+    .testimonials__card:hover .testimonials__card--content,
+    .testimonials__card:active .testimonials__card--content {
+      transform: scaleY(1);
+      transform-origin: top center; }
+    .testimonials__card--img {
+      width: 100%;
+      height: 100%; }
+      .testimonials__card--img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition); }
+        .testimonials__card--img img:hover, .testimonials__card--img img:active {
+          transform: scale(0.98);
+          filter: grayscale(50%); }
+    .testimonials__card--content {
+      position: absolute;
+      top: 60%;
+      left: 0;
+      background-color: var(--tertiary-color-m);
+      width: 80%;
+      padding: 1.5rem;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: var(--transform-duration); }
+      .testimonials__card--content__title {
+        font-size: calc(1.5rem + 1vw);
+        text-transform: uppercase; }
+      .testimonials__card--content__para {
+        font-family: "Indie Flower";
+        font-size: calc(1.2rem + 0.5vw); }
+  @media screen and (max-width: 800px) {
+    .testimonials .testimonials__card--content {
+      top: 55%; } }
+  @media screen and (max-width: 600px) {
+    .testimonials .testimonials__card--content {
+      top: 0;
+      height: 100%;
+      width: 100%;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; } }
+
+.contact {
+  height: 100vh;
+  background-image: url("/up/img/full-bg-03.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; }
+  .contact__form {
+    flex-basis: 40rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary-color-m); }
+    .contact__form input,
+    .contact__form textarea {
+      color: var(--quaternary-color);
+      font-family: "Indie Flower";
+      font-size: calc(1.2rem + 0.5vw);
+      letter-spacing: 0.2rem;
+      padding: calc(0.5rem + 1vw);
+      background: transparent;
+      border: none;
+      border-bottom: var(--secondary-color) solid 0.1rem; }
+      .contact__form input:focus,
+      .contact__form textarea:focus {
+        outline: none;
+        background-color: var(--secondary-color-m);
+        color: var(--quaternary-color); }
+      .contact__form input::placeholder,
+      .contact__form textarea::placeholder {
+        color: var(--quaternary-color); }
+    .contact__form input[type="submit"] {
+      border: none;
+      cursor: pointer; }
+    .contact__form textarea {
+      height: 30vh; }
+  @media screen and (max-width: 800px) {
+    .contact {
+      background-position: 0%; } }
+  @media screen and (max-width: 600px) {
+    .contact {
+      background-position: 18%; } }

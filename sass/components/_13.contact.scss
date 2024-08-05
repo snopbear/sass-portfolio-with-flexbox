@@ -1,0 +1,49 @@
+.contact {
+  height: 100vh;
+  background-image: url("/up/img/full-bg-03.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  &__form {
+    flex-basis: 40rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary-color-m);
+    & input,
+    & textarea {
+      color: var(--quaternary-color);
+      font-family: font-family(indie-flower);
+      font-size: font-size(font-size-small);
+      letter-spacing: 0.2rem;
+      padding: calc(0.5rem + 1vw);
+      background: transparent;
+      border: none;
+      border-bottom: var(--secondary-color) solid 0.1rem;
+      &:focus {
+        outline: none;
+        background-color: var(--secondary-color-m);
+        color: var(--quaternary-color);
+      }
+      &::placeholder {
+        color: var(--quaternary-color);
+      }
+    }
+    & input[type="submit"] {
+      border: none;
+      cursor: pointer;
+    }
+    & textarea {
+      height: 30vh;
+    }
+  }
+
+  @include media-tablet {
+    background-position: 0%;
+  }
+  @include media-medium {
+    background-position: 18%;
+  }
+}

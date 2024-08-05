@@ -28,8 +28,9 @@
       );
       transition: filter 0.45s ease;
 
-      &:hover,&:active{
-        filter:sepia(80%);
+      &:hover,
+      &:active {
+        filter: sepia(80%);
       }
     }
   }

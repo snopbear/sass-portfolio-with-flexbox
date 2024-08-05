@@ -1,10 +1,77 @@
 @keyframes hero {
   0% {
-    transform: translateX(100rem)rotate(360deg);
-  opacity: 0;
+    transform: translateX(100rem) rotate(360deg);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
-   opacity: 1;
+    opacity: 1;
+  }
+}
+
+/************/
+@keyframes web-design {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes print-design {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes logo-design {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@keyframes graphic-design {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@keyframes javaScript{
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes python {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes sql {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
   }
 }

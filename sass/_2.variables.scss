@@ -18,8 +18,11 @@
   /* tertiary color modified */
   --tertiary-color-m: #01727498;
 
-  /* tertiary color modified */
+  /* quaternary color  */
   --quaternary-color: #fff;
+
+  /* quaternary color modified */
+  --quaternary-color-m: #000;
 
   /* Transition cubic  */
   --transition-cubic: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -36,11 +39,12 @@
   /* Transform Duration */
   --transform-duration: transform 0.45s;
 
+  /* Transform Duration ease-in-out */
+  --transform-duration: transform 0.45s ease-in-out;
+
   /* Section Title Font Size */
   --font-size-title: calc(2rem + 2vw);
 
-  /* Section Padding */
-  --padding-section: 8vh 3vw;
 }
 
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Font Family *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
